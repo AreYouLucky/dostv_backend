@@ -32,11 +32,6 @@ class LoginRequest extends FormRequest
         ];
     }
 
-    /**
-     * Validate the request's credentials and return the user without logging them in.
-     *
-     * @throws \Illuminate\Validation\ValidationException
-     */
     public function validateCredentials(): User
     {
         $this->ensureIsNotRateLimited();
