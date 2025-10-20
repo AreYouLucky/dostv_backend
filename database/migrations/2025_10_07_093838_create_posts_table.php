@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->text('excerpt')->nullable();
             $table->integer('episode')->nullable();
-            $table->string('content')->nullable();
+            $table->text('content')->nullable();
             $table->string('platform')->nullable();
             $table->string('url')->nullable();
             $table->string('trailer')->nullable();
@@ -28,9 +28,10 @@ return new class extends Migration
             $table->string('thumbnail')->nullable();
             $table->string('guest')->nullable();
             $table->string('agency')->nullable();
+            $table->string('tags')->nullable();
             $table->date('date_published');
             $table->string('is_featured')->default(0);
-            $table->string('is_active')->default(1);
+            $table->string('status');
             $table->timestamps();
         });
     }

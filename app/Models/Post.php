@@ -23,9 +23,11 @@ class Post extends Model
         'thumbnail',
         'guest',
         'agency',
+        'tags',
         'date_published',
         'is_featured',
-        'is_active',
-        'slug'
+        'status',
+        'slug',
+        'is_converted'
     ];
 }
