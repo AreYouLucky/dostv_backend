@@ -1,17 +1,19 @@
-import React from "react";
 import GuestLayout from "@/layouts/guest-layout";
-import type { PageWithLayout } from "@/types/page";
 
-const Home: PageWithLayout = () => {
-  return <div>Welcome to the Home Page!</div>;
-};
+export default function LoginPage() {
+  return (
+    <div>Login</div>
+  );
+}
 
-Home.layout = (page) => (
+LoginPage.layout = (page: React.ReactNode) => (
   <GuestLayout
-    header={'Home Page'}
+    header={
+      <h2 className="text-xl font-semibold leading-tight text-gray-800">
+        Authentication Page
+      </h2>
+    }
   >
     {page}
   </GuestLayout>
 );
-
-export default Home;
